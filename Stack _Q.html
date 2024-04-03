@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>stack and Q</title>
+    <script>
+        let data=[];
+        let currentSize=data.length;
+        let max=5;
+
+        function push(){
+
+            let newvalue=document.getElementById('addValue').value;
+            console.log("newvalue",newvalue);
+             newvalue=parseInt(newvalue);
+            if(currentSize >= max){
+                alert("stack is full");  
+            }else{
+                data[currentSize++]= newvalue;
+                document.getElementById('addValue').value="";
+
+            }
+             
+             
+        }
+        function pop(){
+             if(currentSize>0){
+                 currentSize-=1;
+                data.length=data.length-1;
+
+             }else{
+                alert("Stack is empty");
+             }
+        }
+        console.log(data);
+
+         function display(){
+            for (let i = 0; i <=currentSize-1; i++) {
+                
+              console.warn(data[i])
+                
+            }
+         }
+    </script>
+</head>
+<body>
+      <input type="text" name="" id="addValue"><br>
+      <button onclick="push()" >Add element in stack</button>
+      <button onclick="pop()">Remove element in stack</button>
+      <button onclick="display()">Display All element in stack</button>
+      
+</body>
+</html>
