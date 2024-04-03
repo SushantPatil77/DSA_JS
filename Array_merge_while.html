@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Merage Array with wile loop</title>
+    <script>
+        let date1=[10,20,30,40,50];
+        let date2=[96,89];
+        let date3=[];
+        let d1=0;
+        let d2=0;
+        let d3=0;
+
+        while (d1<date1.length || d2<date2.length) {
+             if(date1[d1]<date2[d2])
+             {
+                date3[d3]=date1[d1]
+                d1++;
+              //  console.log(date3);
+             }else{
+                date3[d3]=date2[d2]
+                d2++
+               // console.log(date3)
+             }
+            d3++;
+          
+        }
+        console.log(date3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

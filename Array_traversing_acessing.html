@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Travering_acessing</title>
+
+    <script>
+      //Array Travering_acessing;
+ let arr = [7, 8, 9, 6, 75, 66, 33, 22, 55, 63, 63];
+     
+
+      function getValue() {
+        let arr = [7, 8, 9, 6, 75, 66, 33, 22, 55, 63, 63];
+        let el = document.getElementById("inputValue").value;
+        if (el < arr.length && typeof parseInt(el) === Number) {
+            alert(arr[el]);
+          //document.getElementById('jk').innerHTML='Array acessing '+arr[el];  
+             } 
+          else {
+          alert("Please enter vaild number");
+        }
+      }
+
+      for (let i = 0; i < arr.length; i++) {
+         
+         document.write(`Array of index: ${i} and Array of elemet is:${arr[i]} <br>`)
+         
+       }
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter a elemet" id="inputValue" />
+    <button onclick="getValue()">get element</button> <br>
+    <p id="jk"></p>
+  </body>
+</html>
