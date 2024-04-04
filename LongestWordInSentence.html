@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>longest word in sentence</title>
+    <script>
+      let str1 = "i am superherobut not a normal humanofbody";
+      let currentWord = "";
+      let longestWord = "";
+
+      for (let i = 0; i < str1.length; i++) {
+        let char = str1[i];
+
+        if (char !== " ") {
+          currentWord += char;
+        } else {
+          if (currentWord.length > longestWord.length) {
+            longestWord = currentWord;
+          }
+          currentWord = "";
+        }
+      }
+      console.log(longestWord);
+      if (currentWord.length > longestWord.length) {
+        longestWord = currentWord;
+      }
+      console.log("longrest word in sentence  :  ", longestWord);
+    </script>
+  </head>
+  <body></body>
+</html>
