@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      let str = "level";
+      let start = 0;
+      let end = str.length - 1;
+      let isPalindrome = true;
+
+      while (start < end) {
+        if (str[start] !== str[end]) {
+          isPalindrome = false;
+          break;
+        }
+        start++;
+        end--;
+      }
+      if (isPalindrome) {
+        console.log("Strinhg is palindrome");
+      } else {
+        console.log("string is not palindrome");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
