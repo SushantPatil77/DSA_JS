@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      function flatne(arr) {
+        let flatness = [];
+        for (let i = 0; i < arr.length; i++) {
+          if (Array.isArray(arr[i])) {
+            flatness = flatness.concat(flatne(arr[i]));
+          } else {
+            flatness.push(arr[i]);
+          }
+        }
+
+        return flatness;
+      }
+      let nestedArray = [1, [2, [3, 4]], 5, [6]];
+
+      let flat = flatne(nestedArray);
+      console.log(flat);
+    </script>
+  </head>
+  <body></body>
+</html>
