@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      let str1 = "my new sushant";
+      let word = "";
+      let current = "";
+      for (let i = 0; i < str1.length; i++) {
+        if (str1[i] !== " ") {
+          word = str1[i] + word;
+        } else {
+          current += word + " ";
+          word = "";
+        }
+      }
+      current += word;
+
+      console.log(current);
+    </script>
+  </head>
+  <body></body>
+</html>

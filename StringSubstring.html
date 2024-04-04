@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      let str = "abcabbabc";
+      let longest = "";
+      let current = "";
+
+      for (let i = 0; i < str.length; i++) {
+        let index = current.indexOf(str[i]);
+        if (index !== -1) {
+          if (current.length > longest.length) {
+            longest = current;
+          }
+          current = current.slice(index + 1) + str[i];
+        } else {
+          current += str[i];
+        }
+
+        if (current.length > longest.length) {
+          longest = current;
+        }
+      }
+
+      console.log(longest);
+    </script>
+  </head>
+  <body></body>
+</html>
